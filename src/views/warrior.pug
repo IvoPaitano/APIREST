@@ -1,0 +1,22 @@
+include partials/header
+table.table
+    thead
+        tr
+            th(scope='col') #
+            th(scope='col') Nombre
+            th(scope='col') Ataque insignia
+            th(scope='col') Raza
+            th(scope='col') Genero
+            th(scope='col') Acciones
+    tbody
+        each warrior in warriors
+            tr
+                th(scope='col')= warrior.id
+                td= warrior.name
+                td= warrior.mainAttack
+                td= warrior.race
+                td= warrior.gender
+                td
+                    a#edit.btn.btn-warning(href=`/${warrior.id}/edit` role="button") EDITAR
+                    a#delete.btn.btn-danger(href=`/${warrior.id}/delete` role="button") ELIMINAR
+include partials/footer

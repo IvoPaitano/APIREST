@@ -1,0 +1,15 @@
+include partials/header
+form(action="/add" method="post")
+    .form-group
+        label(for="name") Nombre
+        input#name.form-control(type="text" placeholder="nombre" name="name")
+    .form-group
+        label(for="attack") Ataque
+        input#attack.form-control(type="text" placeholder="ataque" name="attack")
+    .form-group
+        label(for="race") Raza
+        input#race.form-control(type="text" placeholder="raza" name="race")
+    .form-group
+        label(for="gender") Genero
+        input#gender.form-control(type="text" placeholder="genero" name="gender")
+    input(type="submit", value="Confirmar")
